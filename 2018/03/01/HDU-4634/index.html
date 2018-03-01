@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to my blog~">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Mountain_lovers" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        HDU-4634｜Mountain_lover&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://haojen.github.io/2018/03/01/HDU-4634/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Mountain_lovers
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>HDU-4634</h1>
+                    
+                    <span class="meta">
+                         作者 Mountain_lovers
+                        <span>
+                          日期 2018-03-01
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#-HDU -贪心"
+                           title="-HDU -贪心">-HDU -贪心</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            HDU-4634
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4634" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4634</a></p>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一个豆腐块想要从初始位置走到出口位置（EXIT），移动方向为上下左右，像象棋里的车，只有走到头才可以改变方向，或者遇到强制转向（L,R,U,D）时转向。如果EXIT被锁住了，那么必须搜集到所有钥匙才可以打开门。当钥匙不全的时候，出口处和普通路没区别。问最少需要多少操作能出去。<br>这里有一点不太清楚的地方，问多少操作是撞墙转向的数量，遇到强制转换不算转向。</p>
+<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>问最短多少步，BFS是显然的。然而直接裸BFS会有两个问题，一个是不好记录取得钥匙的情况，一个是会超时。所以使用状态压缩进行优化。<br>题目指出，最多7把钥匙，所以我们以二进制位0，1记为没取得钥匙，取得了钥匙。<br>对于一个方格内的状态，我们可以用四个参数描述。横坐标，纵坐标，当前取得的钥匙和当前面朝的方向。所以用”used[x][y][ss][dir]”记录状态，重复就不再入队了。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><figcaption><span>HDU-4634++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> N,M,sx,sy;</span><br><span class="line"><span class="keyword">int</span> keynum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> key_value[<span class="number">210</span>][<span class="number">210</span>];</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,dy[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">char</span> mmap[<span class="number">210</span>][<span class="number">210</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">	<span class="keyword">int</span> step;</span><br><span class="line">	<span class="keyword">int</span> key;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">bool</span> used[<span class="number">210</span>][<span class="number">210</span>][<span class="number">1</span>&lt;&lt;<span class="number">7</span>][<span class="number">4</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;Node&gt; q;</span><br><span class="line">	<span class="keyword">while</span> (!q.empty()) q.pop();</span><br><span class="line">	Node hd;</span><br><span class="line">	hd.x=sx; hd.y=sy; hd.step=<span class="number">0</span>; hd.key=<span class="number">0</span>;</span><br><span class="line">	q.push(hd);</span><br><span class="line">	<span class="built_in">memset</span>(used,<span class="number">0</span>,<span class="keyword">sizeof</span>(used));</span><br><span class="line">	<span class="keyword">while</span> (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		Node now,pre;</span><br><span class="line">		pre=q.front();</span><br><span class="line">		q.pop();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> dir=<span class="number">0</span>;dir&lt;<span class="number">4</span>;dir++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> xx=pre.x,yy=pre.y;</span><br><span class="line">			<span class="keyword">int</span> ss=pre.key;</span><br><span class="line">			<span class="keyword">int</span> ddir=dir;</span><br><span class="line">			<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (mmap[xx][yy] == <span class="string">'L'</span>) ddir=<span class="number">2</span>;</span><br><span class="line">				<span class="keyword">if</span> (mmap[xx][yy] == <span class="string">'R'</span>) ddir=<span class="number">3</span>;</span><br><span class="line">				<span class="keyword">if</span> (mmap[xx][yy] == <span class="string">'U'</span>) ddir=<span class="number">0</span>;</span><br><span class="line">				<span class="keyword">if</span> (mmap[xx][yy] == <span class="string">'D'</span>) ddir=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (used[xx][yy][ss][ddir]) <span class="keyword">break</span>; <span class="keyword">else</span> used[xx][yy][ss][ddir]=<span class="literal">true</span>;</span><br><span class="line">				<span class="keyword">if</span> (mmap[xx][yy] == <span class="string">'K'</span>) ss|=key_value[xx][yy];</span><br><span class="line">				<span class="keyword">if</span> (mmap[xx][yy] == <span class="string">'E'</span> &amp;&amp; ss == ((<span class="number">1</span>&lt;&lt;keynum)<span class="number">-1</span>)) <span class="keyword">return</span> pre.step+<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">if</span> (xx+dx[ddir]&gt;<span class="number">0</span> &amp;&amp; xx+dx[ddir]&lt;=N &amp;&amp; yy+dy[ddir]&gt;<span class="number">0</span> &amp;&amp; yy+dy[ddir]&lt;=M)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span> (mmap[xx+dx[ddir]][yy+dy[ddir]] == <span class="string">'#'</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						now.x=xx; now.y=yy; now.step=pre.step+<span class="number">1</span>; now.key=ss;</span><br><span class="line">						q.push(now);</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">					&#123;</span><br><span class="line">						xx+=dx[ddir];</span><br><span class="line">						yy+=dy[ddir];</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;N,&amp;M) == <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		keynum=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">memset</span>(key_value,<span class="number">0</span>,<span class="keyword">sizeof</span>(key_value));</span><br><span class="line">		<span class="keyword">char</span> ch;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;ch);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=M;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;mmap[i][j]);</span><br><span class="line">				<span class="keyword">if</span> (mmap[i][j] == <span class="string">'S'</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					sx=i; sy=j;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (mmap[i][j] == <span class="string">'K'</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					key_value[i][j]=<span class="number">1</span>&lt;&lt;keynum;</span><br><span class="line">					keynum++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,bfs());</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>坚持。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/01/28/2018年1月28日/" data-toggle="tooltip" data-placement="top"
+                           title="2018年1月28日">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzMy8xMDE4OA==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目链接"><span class="toc-text">题目链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目大意"><span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思想"><span class="toc-text">思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后记"><span class="toc-text">后记</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#-HDU -贪心"
+                           title="-HDU -贪心">-HDU -贪心</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zzjzxh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/zzjzxh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/MountainLovers">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Mountain_lovers 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://haojen.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = 'c9f9c825a8cb6e0f741b101af9c98f85';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="">
+</body>
+
+</html>
