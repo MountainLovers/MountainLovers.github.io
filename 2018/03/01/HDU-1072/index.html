@@ -9,13 +9,13 @@
   <title>HDU-1072 | Mountain_lovers&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=1072 题目大意从起始地点到终点，最多走6步，中途某些格子可以将步数加回6。问最少多少步能走出去。 思想这个题相比上一个题，这个题相对简单但是被坑了更久，基本没什么需要多想的，但是卡在了一些小细节上。比如，这个题也有状态的记录和判重。一开始我用的是当前点坐标和上一个点的坐标和方向来作为记录的状态，后来看了">
-<meta name="keywords" content="HDU,搜索">
+<meta name="keywords" content="HDU,算法练习,搜索">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU-1072">
 <meta property="og:url" content="//litten.me/2018/03/01/HDU-1072/index.html">
 <meta property="og:site_name" content="Mountain_lovers&#39; Blog">
 <meta property="og:description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=1072 题目大意从起始地点到终点，最多走6步，中途某些格子可以将步数加回6。问最少多少步能走出去。 思想这个题相比上一个题，这个题相对简单但是被坑了更久，基本没什么需要多想的，但是卡在了一些小细节上。比如，这个题也有状态的记录和判重。一开始我用的是当前点坐标和上一个点的坐标和方向来作为记录的状态，后来看了">
-<meta property="og:updated_time" content="2018-03-03T05:12:32.058Z">
+<meta property="og:updated_time" content="2018-03-03T14:45:43.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU-1072">
 <meta name="twitter:description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=1072 题目大意从起始地点到终点，最多走6步，中途某些格子可以将步数加回6。问最少多少步能走出去。 思想这个题相比上一个题，这个题相对简单但是被坑了更久，基本没什么需要多想的，但是卡在了一些小细节上。比如，这个题也有状态的记录和判重。一开始我用的是当前点坐标和上一个点的坐标和方向来作为记录的状态，后来看了">
@@ -73,6 +73,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
+				<li><a href="/tags/算法练习/">算法练习</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -123,6 +125,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -136,12 +140,14 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/算法练习/">算法练习</a></li>
 		        
 				</ul>
 			</nav>
@@ -221,6 +227,10 @@ var _hmt = _hmt || [];
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HDU</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法练习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -423,15 +433,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HDU</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搜索</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -439,15 +441,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">搜索</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">区间DP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状态压缩</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状态压缩</a>
               </li>
             
             <div class="clearfix"></div>
