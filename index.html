@@ -183,8 +183,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4433" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4433</a></p>
-<h3 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一把六位数字的密码锁，一次可以移动1/2/3位，向上移动一位或向下移动一位。给定现在的状态和密码的状态，问最少操作多少。</p>
+        <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4433" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4433</a></p>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一把六位数字的密码锁，一次可以移动1/2/3位，向上移动一位或向下移动一位。给定现在的状态和密码的状态，问最少操作多少。</p>
 <h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这是一个动归，但是状态比较难描述。<br>我们记录dp[i][j][k]为前i位已经OK，第i+1位增加了j，第i+2位增加了k时，已经走了dp[i][j][k]步。<br>目前我们假设前i位已经OK，第i+1位增加了j，那么现在的i+1位变成正确的移动的步数为s2[i]-s1[i]-j。应该考虑up和down两个操作。<br>应该注意的是，第i位的操作数&gt;=第i+1位的操作数&gt;=第i+2位的操作数<br>
         
           <a class="article-more-a" href="/2018/03/04/HDU-4433/#more">more >></a>
@@ -923,10 +923,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HDU</a>
               </li>
              
@@ -939,15 +935,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">DP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间DP</a>
+                <a href="javascript:void(0)" class="js-tag color5">状态压缩</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状态压缩</a>
+                <a href="javascript:void(0)" class="js-tag color5">区间DP</a>
               </li>
              
               <li class="article-tag-list-item">
