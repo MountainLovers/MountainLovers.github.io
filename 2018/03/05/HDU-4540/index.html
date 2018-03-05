@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//litten.me">
-  <title>HDU-1078 | Mountain_lovers&#39; Blog</title>
+  <title>HDU-4540 | Mountain_lovers&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=1078 题目大意有一只老鼠在一个n*n的地图上跑，只能水平或竖直跑，最多一次跑k步，每停到一个位置，就要吃掉当前位置的全部奶酪，并且要求每一次停的位置的奶酪数必须大于上一次停的位置的奶酪数。问最大能吃多少块奶酪。">
-<meta name="keywords" content="HDU,算法练习,搜索,DP">
+  <meta name="description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=4540 题目大意很简单的DP，代价是一维坐标之差，从第一行走到最后一行问代价最小是多少。记录dp[i][j]是从第一行到第i行第j个位置的消耗。状态转移方程为从dp[i][j]=min{dp[i-1][kk]+abs(j,k位置的坐标之差)},1&amp;lt;=kk&amp;lt;=K">
+<meta name="keywords" content="HDU,算法练习,DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU-1078">
-<meta property="og:url" content="//litten.me/2018/03/04/HDU-1078/index.html">
+<meta property="og:title" content="HDU-4540">
+<meta property="og:url" content="//litten.me/2018/03/05/HDU-4540/index.html">
 <meta property="og:site_name" content="Mountain_lovers&#39; Blog">
-<meta property="og:description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=1078 题目大意有一只老鼠在一个n*n的地图上跑，只能水平或竖直跑，最多一次跑k步，每停到一个位置，就要吃掉当前位置的全部奶酪，并且要求每一次停的位置的奶酪数必须大于上一次停的位置的奶酪数。问最大能吃多少块奶酪。">
-<meta property="og:updated_time" content="2018-03-04T05:44:31.593Z">
+<meta property="og:description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=4540 题目大意很简单的DP，代价是一维坐标之差，从第一行走到最后一行问代价最小是多少。记录dp[i][j]是从第一行到第i行第j个位置的消耗。状态转移方程为从dp[i][j]=min{dp[i-1][kk]+abs(j,k位置的坐标之差)},1&amp;lt;=kk&amp;lt;=K">
+<meta property="og:updated_time" content="2018-03-05T14:49:15.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU-1078">
-<meta name="twitter:description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=1078 题目大意有一只老鼠在一个n*n的地图上跑，只能水平或竖直跑，最多一次跑k步，每停到一个位置，就要吃掉当前位置的全部奶酪，并且要求每一次停的位置的奶酪数必须大于上一次停的位置的奶酪数。问最大能吃多少块奶酪。">
+<meta name="twitter:title" content="HDU-4540">
+<meta name="twitter:description" content="题目链接http://acm.hdu.edu.cn/showproblem.php?pid=4540 题目大意很简单的DP，代价是一维坐标之差，从第一行走到最后一行问代价最小是多少。记录dp[i][j]是从第一行到第i行第j个位置的消耗。状态转移方程为从dp[i][j]=min{dp[i-1][kk]+abs(j,k位置的坐标之差)},1&amp;lt;=kk&amp;lt;=K">
   
     <link rel="alternative" href="/atom.xml" title="Mountain_lovers&#39; Blog" type="application/atom+xml">
   
@@ -162,31 +162,30 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HDU-1078" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-HDU-4540" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HDU-1078
+      HDU-4540
     </h1>
   
 
         
-        <a href="/2018/03/04/HDU-1078/" class="archive-article-date">
-  	<time datetime="2018-03-04T05:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-04</time>
+        <a href="/2018/03/05/HDU-4540/" class="archive-article-date">
+  	<time datetime="2018-03-05T14:39:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1078" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=1078</a></p>
-<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一只老鼠在一个n*n的地图上跑，只能水平或竖直跑，最多一次跑k步，每停到一个位置，就要吃掉当前位置的全部奶酪，并且要求每一次停的位置的奶酪数必须大于上一次停的位置的奶酪数。问最大能吃多少块奶酪。<br><a id="more"></a></p>
-<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>显然会用到搜索，当直接写一个搜索的时候会TLE，所以考虑记忆化搜索。向后记忆，例如，当卡走到了(x1,y1)这个点，不论前面是怎么到这个点的，从这个点向后走都是一样的。所以假设这个点已经走过了，那么就不需要再重新搜索一遍了，只需要把答案返回回去。<br>我们这里开辟dp[i][j]表示从(i,j)点开始搜索能吃到的最大奶酪数，mmap[i][j]表示该点的奶酪数。<br>状态转移方程：dp[i][j]=max(dp[x][y])+mmap[i][j],(x,y)为所有能一次到达(i,j)的坐标。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><figcaption><span>HDU-1078</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,k;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;,dy[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">105</span>][<span class="number">105</span>],mmap[<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (dp[x][y]) <span class="keyword">return</span> dp[x][y];</span><br><span class="line">    dp[x][y]=mmap[x][y];</span><br><span class="line">    <span class="keyword">int</span> mmax=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> kk=<span class="number">1</span>;kk&lt;=k;kk++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> dir=<span class="number">0</span>;dir&lt;<span class="number">4</span>;dir++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> xx=x+dx[dir]*kk;</span><br><span class="line">            <span class="keyword">int</span> yy=y+dy[dir]*kk;</span><br><span class="line">            <span class="keyword">if</span> (xx &lt; <span class="number">0</span> || xx &gt;= n || yy &lt; <span class="number">0</span> || yy &gt;= n) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span> (mmap[xx][yy] &lt;= mmap[x][y]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">int</span> nn=dfs(xx,yy);</span><br><span class="line">            <span class="keyword">if</span> (mmax &lt; nn) mmax=nn;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[x][y]+=mmax;</span><br><span class="line">    <span class="keyword">return</span> dp[x][y];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k) &amp;&amp; n!=<span class="number">-1</span> &amp;&amp; k!=<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;mmap[i][j]);</span><br><span class="line">        <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dfs(<span class="number">0</span>,<span class="number">0</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这个题有点坑，，前面写了一发bfs结果tle了。。于是心态崩了去打soul knight。。。输的回来继续写代码。。。天意天意。。。。</p>
+        <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4540" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4540</a></p>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>很简单的DP，代价是一维坐标之差，从第一行走到最后一行问代价最小是多少。<br>记录dp[i][j]是从第一行到第i行第j个位置的消耗。<br>状态转移方程为从dp[i][j]=min{dp[i-1][kk]+abs(j,k位置的坐标之差)},1&lt;=kk&lt;=K<br><a id="more"></a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><figcaption><span>HDU-4540</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 1&lt;&lt;31-1</span></span><br><span class="line"><span class="keyword">int</span> N,K;</span><br><span class="line"><span class="keyword">int</span> mmap[<span class="number">25</span>][<span class="number">15</span>],dp[<span class="number">25</span>][<span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;N,&amp;K))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> ans=INF;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=K;j++)</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;mmap[i][j]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=K;j++)</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">1</span>) dp[i][j]=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    dp[i][j]=INF;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=K;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=K;k++)</span><br><span class="line">                    dp[i][j]=min(dp[i][j],dp[i<span class="number">-1</span>][k]+<span class="built_in">abs</span>(mmap[i][j]-mmap[i<span class="number">-1</span>][k]));</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=K;i++)</span><br><span class="line">            <span class="keyword">if</span> (ans &gt; dp[N][i]) ans=dp[N][i];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>今天只做了这一道题，是最简单的DP，很裸，还是中文的题干，正好现在也很晚了，也没想到能一次A。应该说有一点进步。今天发生了很多事，不过还蛮好的。<br>加油！<br>祝所有人平安吧。</p>
 
       
 
@@ -231,10 +230,6 @@ var _hmt = _hmt || [];
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法练习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搜索</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -294,7 +289,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://litten.me/2018/03/04/HDU-1078/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://litten.me/2018/03/05/HDU-4540/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,18 +303,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/03/04/HDU-4433/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HDU-4433
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/03/HDU-4055/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HDU-4055</div>
+    <a href="/2018/03/04/HDU-4433/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HDU-4433</div>
       <i class="icon-circle-right"></i>
     </a>
   
