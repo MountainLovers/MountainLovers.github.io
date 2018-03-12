@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/03/12/5aa66b2d82696.png">
 <meta property="og:image" content="https://i.loli.net/2018/03/12/5aa66b2d82703.png">
 <meta property="og:image" content="https://i.loli.net/2018/03/12/5aa66b2d82783.png">
-<meta property="og:updated_time" content="2018-03-12T12:23:56.969Z">
+<meta property="og:updated_time" content="2018-03-12T12:39:52.813Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据的机器级表示与处理Ⅰ">
 <meta name="twitter:description" content="写在前面今天写了一些计组的作业，主要内容是数字的机器级表示。以前大一的时候学过一些，当时还气血方刚的花了100多大洋买了一本《深入理解计算机系统》。如今可以重拾起来啦。觉得有些东西蛮神奇的，以前写代码时候会遇到一些莫名其妙的错误，比如#define MAX 2147483647会出错，但是#define MAX 1&amp;lt;&amp;lt;31-1就不会出错。希望能够好好学习这门课程，深入理解内部的原理。这">
@@ -214,6 +214,147 @@ var _hmt = _hmt || [];
 </code></pre><h5 id="最终效果："><a href="#最终效果：" class="headerlink" title="最终效果："></a>最终效果：</h5><h6 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a1 = <span class="number">0x80000000</span>;</span><br><span class="line">    <span class="keyword">int</span> a2 = <span class="number">2147483648U</span>;</span><br><span class="line">    <span class="keyword">int</span> b1 = <span class="number">-2147483647</span><span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> b2 = <span class="number">-2147483648U</span>;</span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">2147483649U</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> d = <span class="number">65539U</span>;</span><br><span class="line">    <span class="keyword">short</span> e = <span class="number">-32790</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a1=%d\na2=%d\n"</span>,a1,a2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"b1=%d\nb2=%d\n"</span>,b1,b2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"c=%d\n"</span>,c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"d=%hu\n"</span>,d);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"e=%hd\n"</span>,e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h6 id="编译信息："><a href="#编译信息：" class="headerlink" title="编译信息："></a>编译信息：</h6><p><img src="https://i.loli.net/2018/03/12/5aa66b2d82703.png" alt=""></p>
 <h6 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h6><p><img src="https://i.loli.net/2018/03/12/5aa66b2d82783.png" alt=""></p>
+<h3 id="附录–C语言中不同变量类型的输出格式"><a href="#附录–C语言中不同变量类型的输出格式" class="headerlink" title="附录–C语言中不同变量类型的输出格式"></a>附录–C语言中不同变量类型的输出格式</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">符号属性</th>
+<th style="text-align:left">长度属性</th>
+<th style="text-align:left">基本型</th>
+<th style="text-align:left">所占位数</th>
+<th style="text-align:left">取值范围</th>
+<th style="text-align:left">输入符举例</th>
+<th style="text-align:left">输出符举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">–</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">char</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">-2^7~2^7-1</td>
+<td style="text-align:left">%c</td>
+<td style="text-align:left">%c/%d/%u</td>
+</tr>
+<tr>
+<td style="text-align:left">signed</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">char</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">-2^7~2^7-1</td>
+<td style="text-align:left">%c</td>
+<td style="text-align:left">%c/%d/%u</td>
+</tr>
+<tr>
+<td style="text-align:left">unsigned</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">char</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">0~2^8-1</td>
+<td style="text-align:left">%c</td>
+<td style="text-align:left">%c/%d/%u</td>
+</tr>
+<tr>
+<td style="text-align:left">[signed]</td>
+<td style="text-align:left">short</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">-2^15~2^15-1</td>
+<td style="text-align:left">%hd</td>
+<td style="text-align:left">%hd</td>
+</tr>
+<tr>
+<td style="text-align:left">unsigned</td>
+<td style="text-align:left">short</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">0~2^16-1</td>
+<td style="text-align:left">%hu/%ho/%hx</td>
+<td style="text-align:left">%hu/%ho/%hx</td>
+</tr>
+<tr>
+<td style="text-align:left">[signed]</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">-2^31~2^31-1</td>
+<td style="text-align:left">%d</td>
+<td style="text-align:left">%d</td>
+</tr>
+<tr>
+<td style="text-align:left">unsigned</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">0~2^32-1</td>
+<td style="text-align:left">%u/%o/%x</td>
+<td style="text-align:left">%u/%o/%x</td>
+</tr>
+<tr>
+<td style="text-align:left">[signed]</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">-2^31~2^31-1</td>
+<td style="text-align:left">%ld</td>
+<td style="text-align:left">%ld</td>
+</tr>
+<tr>
+<td style="text-align:left">unsigned</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">0~2^32-1</td>
+<td style="text-align:left">%lu/%lo/%lx</td>
+<td style="text-align:left">%lu/%lo/%lx</td>
+</tr>
+<tr>
+<td style="text-align:left">[signed]</td>
+<td style="text-align:left">long long</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">64</td>
+<td style="text-align:left">-2^63~2^63-1</td>
+<td style="text-align:left">%lld/%I64d</td>
+<td style="text-align:left">%lld/%I64d</td>
+</tr>
+<tr>
+<td style="text-align:left">unsigned</td>
+<td style="text-align:left">long long</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">64</td>
+<td style="text-align:left">0~2^64-1</td>
+<td style="text-align:left">%llu/%llo/%llx</td>
+<td style="text-align:left">%llu/%llo/%llx</td>
+</tr>
+<tr>
+<td style="text-align:left">–</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">+/-3.40282e+038</td>
+<td style="text-align:left">%f/%e/%g</td>
+<td style="text-align:left">%f/%e/%g</td>
+</tr>
+<tr>
+<td style="text-align:left">–</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">64</td>
+<td style="text-align:left">+/-1.79769e+308</td>
+<td style="text-align:left">%lf/%le/%lg</td>
+<td style="text-align:left">%lf/%le/%lg</td>
+</tr>
+<tr>
+<td style="text-align:left">–</td>
+<td style="text-align:left">–</td>
+<td style="text-align:left">long double</td>
+<td style="text-align:left">96</td>
+<td style="text-align:left">+/-1.79769+308</td>
+<td style="text-align:left">%Lf/%Le/%Lg</td>
+<td style="text-align:left">%Lf/%Le/%Lg</td>
+</tr>
+</tbody>
+</table>
 
       
 
@@ -443,10 +584,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HDU</a>
               </li>
              
@@ -456,6 +593,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">搜索</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
