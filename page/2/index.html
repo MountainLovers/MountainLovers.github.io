@@ -163,6 +163,92 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HDU-4433" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/04/HDU-4433/">HDU-4433</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/04/HDU-4433/" class="archive-article-date">
+  	<time datetime="2018-03-04T12:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4433" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4433</a></p>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一把六位数字的密码锁，一次可以移动1/2/3位，向上移动一位或向下移动一位。给定现在的状态和密码的状态，问最少操作多少。</p>
+<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这是一个动归，但是状态比较难描述。<br>我们记录dp[i][j][k]为前i位已经OK，第i+1位增加了j，第i+2位增加了k时，已经走了dp[i][j][k]步。<br>目前我们假设前i位已经OK，第i+1位增加了j，那么现在的i+1位变成正确的移动的步数为s2[i]-s1[i]-j。应该考虑up和down两个操作。<br>应该注意的是，第i位的操作数&gt;=第i+1位的操作数&gt;=第i+2位的操作数<br></p>
+        
+          <a class="article-more-a" href="/2018/03/04/HDU-4433/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HDU</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法练习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/04/HDU-4433/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-HDU-1078" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -184,7 +270,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1078" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=1078</a></p>
-<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一只老鼠在一个n*n的地图上跑，只能水平或竖直跑，最多一次跑k步，每停到一个位置，就要吃掉当前位置的全部奶酪，并且要求每一次停的位置的奶酪数必须大于上一次停的位置的奶酪数。问最大能吃多少块奶酪。<br>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一只老鼠在一个n*n的地图上跑，只能水平或竖直跑，最多一次跑k步，每停到一个位置，就要吃掉当前位置的全部奶酪，并且要求每一次停的位置的奶酪数必须大于上一次停的位置的奶酪数。问最大能吃多少块奶酪。<br></p>
         
           <a class="article-more-a" href="/2018/03/04/HDU-1078/#more">more >></a>
         
@@ -274,7 +360,7 @@ var _hmt = _hmt || [];
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4055" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4055</a></p>
 <h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给定连续的1~n的序列，连续两个数字之间为递增关系则用”I”表示，为递减关系则用”D”表示，”?”表示不确定的关系。给定字母序列，求满足该字母关系序列的可能的情况数量。</p>
-<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这个题首先需要考虑用什么表示DP的状态<br>我们用dp[i][j]表示一段长度为i的、以j为结尾的序列的、满足当前字母关系的情况数量。<br>则最终答案为sigma{dp[n][i]},1&lt;=i&lt;=n。<br>
+<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这个题首先需要考虑用什么表示DP的状态<br>我们用dp[i][j]表示一段长度为i的、以j为结尾的序列的、满足当前字母关系的情况数量。<br>则最终答案为sigma{dp[n][i]},1&lt;=i&lt;=n。<br></p>
         
           <a class="article-more-a" href="/2018/03/03/HDU-4055/#more">more >></a>
         
@@ -360,7 +446,7 @@ var _hmt = _hmt || [];
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4283" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4283</a></p>
 <h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一群人排成一队，然后每人有一个屌丝值，有k个人在他前面，那他的怒气值就是k*屌丝值。<br>现在有一个小黑屋，小黑屋的规则类似栈，先进后出。进入小黑屋后，该人后面的可以比他提前入场。问最小的队伍总怒气值是多少。</p>
-<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这是一个区间DP，我们在1……n这些人中取第i到第j个人，先不考虑头尾，只考虑中间这j-i+1个人。<br>记dp[i][j]为从i到j这个区间内的最小怒气值。<br>
+<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这是一个区间DP，我们在1……n这些人中取第i到第j个人，先不考虑头尾，只考虑中间这j-i+1个人。<br>记dp[i][j]为从i到j这个区间内的最小怒气值。<br></p>
         
           <a class="article-more-a" href="/2018/03/02/HDU-4283/#more">more >></a>
         
@@ -446,7 +532,7 @@ var _hmt = _hmt || [];
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1072" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=1072</a></p>
 <h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>从起始地点到终点，最多走6步，中途某些格子可以将步数加回6。问最少多少步能走出去。</p>
-<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这个题相比上一个题，这个题相对简单但是被坑了更久，基本没什么需要多想的，但是卡在了一些小细节上。<br>比如，这个题也有状态的记录和判重。一开始我用的是当前点坐标和上一个点的坐标和方向来作为记录的状态，后来看了题解后发现是用的当前点的坐标和剩余的步数。所以，哪些参数可以用来确定状态还需要思考。<br>
+<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>这个题相比上一个题，这个题相对简单但是被坑了更久，基本没什么需要多想的，但是卡在了一些小细节上。<br>比如，这个题也有状态的记录和判重。一开始我用的是当前点坐标和上一个点的坐标和方向来作为记录的状态，后来看了题解后发现是用的当前点的坐标和剩余的步数。所以，哪些参数可以用来确定状态还需要思考。<br></p>
         
           <a class="article-more-a" href="/2018/03/01/HDU-1072/#more">more >></a>
         
@@ -531,7 +617,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4634" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=4634</a></p>
-<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一个豆腐块想要从初始位置走到出口位置（EXIT），移动方向为上下左右，像象棋里的车，只有走到头才可以改变方向，或者遇到强制转向（L,R,U,D）时转向。如果EXIT被锁住了，那么必须搜集到所有钥匙才可以打开门。当钥匙不全的时候，出口处和普通路没区别。问最少需要多少操作能出去。<br>这里有一点不太清楚的地方，问多少操作是撞墙转向的数量，遇到强制转换不算转向。<br>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一个豆腐块想要从初始位置走到出口位置（EXIT），移动方向为上下左右，像象棋里的车，只有走到头才可以改变方向，或者遇到强制转向（L,R,U,D）时转向。如果EXIT被锁住了，那么必须搜集到所有钥匙才可以打开门。当钥匙不全的时候，出口处和普通路没区别。问最少需要多少操作能出去。<br>这里有一点不太清楚的地方，问多少操作是撞墙转向的数量，遇到强制转换不算转向。<br></p>
         
           <a class="article-more-a" href="/2018/03/01/HDU-4634/#more">more >></a>
         
@@ -619,7 +705,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>今天下午去找了IDP的老师面谈，最终在晚上决定了走中介留学的这条路。可能是一瞬间的头脑发热，我想仔细的考虑一下我留学的目的。仔细审视自己，其实萌发留学的念头也许可以说是两个，一个是想在这辈子有更多的见识，一个是为了以后能够顺利的走一个大学老师或者研究的路。我想体验国外的教育。但是这个决定不仅仅影响了自己，毕竟花销很大。朋友们都说，做好当下的事，相信付出的回报。其实心里啊是还是害怕会付出了这么多精力金钱和时间却没能坚持下来，自己的自制力还是挺差的。既然选择了这条路，那就跪着也要走完。不要辜负自己，不要辜负爸妈。<br>很感谢我的爸妈今晚给了我这么大的支持。每当想到大家已经开始赚钱养家而我还在靠家里的钱读书的时候就觉得不是滋味。我们总不能把这辈子看得清楚，做出决定前，也无法知道会走向什么样的结果。不管做出什么样的决定大概都会后悔，但是虽然知道会这样，也忍不住的去担心。<br>也谢谢今天的老铁们的开导啊！<br>
+        <h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>今天下午去找了IDP的老师面谈，最终在晚上决定了走中介留学的这条路。可能是一瞬间的头脑发热，我想仔细的考虑一下我留学的目的。仔细审视自己，其实萌发留学的念头也许可以说是两个，一个是想在这辈子有更多的见识，一个是为了以后能够顺利的走一个大学老师或者研究的路。我想体验国外的教育。但是这个决定不仅仅影响了自己，毕竟花销很大。朋友们都说，做好当下的事，相信付出的回报。其实心里啊是还是害怕会付出了这么多精力金钱和时间却没能坚持下来，自己的自制力还是挺差的。既然选择了这条路，那就跪着也要走完。不要辜负自己，不要辜负爸妈。<br>很感谢我的爸妈今晚给了我这么大的支持。每当想到大家已经开始赚钱养家而我还在靠家里的钱读书的时候就觉得不是滋味。我们总不能把这辈子看得清楚，做出决定前，也无法知道会走向什么样的结果。不管做出什么样的决定大概都会后悔，但是虽然知道会这样，也忍不住的去担心。<br>也谢谢今天的老铁们的开导啊！<br></p>
         
           <a class="article-more-a" href="/2018/01/28/2018年1月28日/#more">more >></a>
         
@@ -748,78 +834,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/27/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-27T06:50:17.497Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a><br>
-        
-          <a class="article-more-a" href="/2018/01/27/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/27/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -906,10 +923,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HDU</a>
               </li>
              
@@ -919,6 +932,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">搜索</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -938,11 +955,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">状态压缩</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">ICS-Homework</a>
               </li>
             
             <div class="clearfix"></div>
